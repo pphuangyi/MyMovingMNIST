@@ -10,14 +10,12 @@ import numpy as np
 import torch
 from torch.utils.data import Dataset, DataLoader
 
-ROOT = '../../data/moving_mnist'
-
 class MovingMNIST(Dataset):
     """
     Moving MNIST dataset API
     """
     def __init__(self,
-                 path         = ROOT,
+                 path,
                  split        = 'train',
                  seq_len      = 10,
                  horizon      = 1,
